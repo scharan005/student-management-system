@@ -2,15 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sop_app/models/sop_request.dart';
 import 'package:sop_app/services/database_service.dart';
-import 'package:sop_app/widgets/top_bar.dart';import 'package:flutter/material.dart';
+import 'package:sop_app/widgets/top_bar.dart';
 import 'package:provider/provider.dart';
 
 import 'package:sop_app/providers/sop_page_provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
-import 'package:sop_app/services/database_service.dart';
 
-import 'package:sop_app/widgets/rounded_button.dart';
 
 
 class AdminPage extends StatefulWidget {
@@ -90,16 +88,16 @@ class _AdminPageState extends State<AdminPage> {
           return Text('No requests found');
         } else {
           return SizedBox(
-            height: _deviceHeight * 0.7, // adjust the height as needed
+            height: _deviceHeight * 0.7,
             child: ListView.builder(
               itemCount: requests.length,
               itemBuilder: (BuildContext context, int index) {
                 SOPRequest request = requests[index];
                 String timeAgo = timeago.format(request.submittedon);
                 return Dismissible(
-                  key: Key(request.bitsid), // use the SOP request ID as the key
+                  key: Key(request.bitsid),
                   onDismissed: (direction) async {
-                    // remove the SOP request from Firestore and update the list
+
                     await _db.deleteSopRequest(request.bitsid);
                     requests.removeAt(index);
                     _sopRequests.value = requests;
@@ -116,11 +114,11 @@ class _AdminPageState extends State<AdminPage> {
                           Text(request.worktitle),
                           Text(
                             'Submitted $timeAgo',
-                            style: TextStyle(fontSize: 12.0), // adjust the font size as needed
+                            style: TextStyle(fontSize: 12.0),
                           ),
                         ],
                       ),
-                      trailing: Icon(Icons.delete), // add the delete icon
+                      trailing: Icon(Icons.delete),
                     ),
                   ),
                 );

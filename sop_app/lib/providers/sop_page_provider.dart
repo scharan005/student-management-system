@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sop_app/models/sop_request.dart';
-import 'package:sop_app/models/sop_user.dart';
 import 'package:sop_app/services/database_service.dart';
 
 class SopPageProvider extends ChangeNotifier {

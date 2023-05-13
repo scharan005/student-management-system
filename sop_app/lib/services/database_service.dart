@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 //Models
 import '../models/chat_message.dart';
-import '../models/sop_user.dart';
+
 import '../models/sop_request.dart';
 
 
