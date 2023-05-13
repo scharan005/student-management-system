@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "156794770271",
+    "project_id": "sop-chat-01",
+    "storage_bucket": "sop-chat-01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156794770271:android:360b2013ffa7fb4c791cea",
+        "android_client_info": {
+          "package_name": "com.example.sop_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156794770271-umro3cf2e53of9rs8t4gtf7ru3v1tmdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbUWP9_cAMVgZa2yjclyUU2nkEv0-xjas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156794770271-umro3cf2e53of9rs8t4gtf7ru3v1tmdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
